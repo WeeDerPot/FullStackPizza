@@ -1,0 +1,276 @@
+/* Navbar */
+body {
+    /*background-image: linear-gradient(to bottom right, white , black);*/
+    background-image: url("./Images/pizza-4968645_1920.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.navbar {
+    width: 100%;
+    z-index: 9999;
+}
+.bg-custom {
+    background-color: lime;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+#logo{
+    height: 150px;
+    width: 150px;
+}
+.dropdown-menu {
+    width: 260px;
+    right: 1%;
+    left: auto;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, lime , white);
+}
+.input-group{
+    padding-right: 10px;
+}
+.btn-custom{
+    background-color: grey;
+    border-color: lime;
+    color: white;
+}
+.dropdown-item:hover {
+    background-color: rgb(222, 235, 206);
+}
+.minilogin{
+    margin: 0;
+    transform: translateX(48%);
+}
+.minilogout{
+    margin-left: 10px;
+}
+.iconBox{
+    width: 37px;
+}
+.CartLink {
+    background-color: rgb(241, 241, 28);
+    border: solid 1px rgb(97, 97, 15);
+    color: rgb(14, 133, 14);
+    width: 50px;
+}
+.CartLink:hover {
+    background-color: rgb(233, 166, 43);
+}
+.logindiv{
+    text-align: center;
+}
+/* Slide */
+.tartalom {
+    position: relative;
+    min-height: 45vh;
+    min-width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}
+.slider-div {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+}
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+.manual-nav{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid lime;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 35px;
+}
+.manual-btn:hover{
+    background: lime;
+}
+#slideRadio1:checked ~ .first{
+    margin-left: 0;
+}
+#slideRadio2:checked ~ .first{
+    margin-left: -20%;
+}
+#slideRadio3:checked ~ .first{
+    margin-left: -40%;
+}
+#slideRadio4:checked ~ .first{
+    margin-left: -60%;
+}
+.auto-nav{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+.auto-nav div{
+    border: 2px solid lime;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.auto-nav div:not(:last-child){
+    margin-right: 35px;
+}
+#slideRadio1:checked ~ .auto-nav .auto-btn1{
+    background: lime;
+}
+#slideRadio2:checked ~ .auto-nav .auto-btn2{
+    background: lime;
+}
+#slideRadio3:checked ~ .auto-nav .auto-btn3{
+    background: lime;
+}
+#slideRadio4:checked ~ .auto-nav .auto-btn4{
+    background: lime;
+}
+/* Footer */
+.footer {
+    background-color: lime;
+    font-size: 90%;
+
+    width: 100%;
+    bottom: 0;
+    left:0;
+    right:0;
+    height: 170px;
+}
+.footer p {
+    margin-bottom: 0;
+}
+.footer .container {
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 80%;
+}
+.links ul{
+    list-style-type: none;
+}
+.links li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.links li a:hover {
+    text-decoration: none;
+    color: rgb(25, 150, 233); 
+}
+.info a {
+    color: black;
+    transition: color 0.2s;
+}
+.info a:hover {
+    color: rgb(25, 150, 233); 
+}
+.copyright p {
+    border-top: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+/* Rólunk oldal */
+#etteremkep{
+    width: 100%;
+    height: 100%;
+}
+#tortenet{
+    color: rgba(0, 255, 0, 0.664);
+}
+
+/* Kapcsolat oldal */
+.mapCanvas{
+    margin-right: 10px;
+    justify-content: left;
+    height: 100%;
+}
+.contactdiv{
+    color: rgba(0, 255, 0, 0.664);
+}
+
+/* Étlap oldal */
+.card {
+    margin-top: 20px;
+}
+.card-block {
+    padding-bottom: 15px;
+}
+.card-title {
+    margin-top: 15px;
+}
+.card-block{
+    border: lime 1px solid;
+    background-color: rgba(182, 236, 182, 0.986);
+}
+.etlapDiv h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    text-align: center;
+    border-bottom: lime 1px solid;
+    -webkit-text-stroke: 1px white;
+    color: black;
+    text-shadow:
+        3px 3px 0 lime,
+        -1px -1px 0 lime,  
+        1px -1px 0 lime,
+        -1px 1px 0 lime,
+        1px 1px 0 lime;
+}
+#C1, #C2, #C3 {
+    padding-top: 54px;
+    margin-top: -54px;
+}
+
+/* Regisztráció oldal */
+.regcard{
+    border-color: lime;
+}
+.regheader{
+    background-color: grey;
+    border-color: lime;
+    -webkit-text-stroke: 1px white;
+    color: black;
+}
+.regcard{
+    background-image: linear-gradient(to bottom right, lime , white);
+}
+.registrationdiv{
+    width: 100%;
+    margin:0px;
+    padding-bottom: 50px;
+    margin-top: 60px;
+}

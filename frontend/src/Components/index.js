@@ -1,0 +1,10 @@
+export { default as Nav } from "./Nav";
+export { default as Footer } from "./Footer";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Home } from "./Home";
+export { default as Menu } from "./Menu";
+export { default as Registration } from "./Registration";
+export { default as Admin } from "./Admin";
+export { default as Cart } from "./Cart";
+export { default as Profile } from "./Profile";
