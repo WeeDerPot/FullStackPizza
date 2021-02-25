@@ -19,6 +19,10 @@ function Nav(props) {
             if (res.data === "Succesfully Authenticated!") {
                 window.location.href = "/";
             }
+        }, () => {
+            console.log("Failure!")
+            alert("Sikertelen bejelentkezés!");
+            window.location.href = "/";
         })
     }
 
@@ -83,7 +87,7 @@ function Nav(props) {
                                     </li>
                                 ) : null}
                                 <li class="nav-item">
-                                    <button class="btn btn-custom minilogin" onClick={GetUser}>Profile</button>
+                                    <button class="btn btn-custom minilogin" onClick={GetUser}>GetUser</button>
                                 </li>
                                 </>
                             ) : (
@@ -104,7 +108,7 @@ function Nav(props) {
                                         <a class="btn btn-custom CartLink" href="/cart"><span><i class="fas fa-shopping-basket"></i></span></a>
                                     </li>
                                 </ul>
-                                <button class="btn btn-custom minilogout" onClick={Logout}>Kijelentkezés</button>
+                                <input type="button" class="btn btn-custom minilogout" value="Kijelentkezés" onClick={Logout}/>
                                 </>
                             ) : (
                                 <>
@@ -128,7 +132,7 @@ function Nav(props) {
                                                 </div>
                                                 <input type="password" class="form-control" placeholder="Jelszó" name="password" id="loginpassword" onChange={e => setPassword(e.target.value)}/>
                                             </div> 
-                                            <button class="btn btn-custom minilogin" onClick={Login}>Bejelentkezés</button>                                                                 
+                                            <input type="button" class="btn btn-custom minilogin" value="Bejelentkezés" onClick={Login}/>                                                               
                                         </form>
                                     </div>
                                 </div>

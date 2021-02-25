@@ -274,3 +274,7 @@ body {
     padding-bottom: 50px;
     margin-top: 60px;
 }
+/* Admin Page */
+.adminTitle{
+    margin-top: 25px;
+}

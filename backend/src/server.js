@@ -67,6 +67,7 @@ passport.deserializeUser((id, cb) => {
             email: user.email,
             fullname: user.fullname,
             isAdmin: user.isAdmin,
+            id: user._id
         };
         cb(err, userInformation);
     });

@@ -3,11 +3,15 @@ import axios from "axios";
 import { Redirect, withRouter } from "react-router-dom";
 
 function Registration(props) {
+
+
     const [registerFullname, setRegisterFullname] = useState("");
     const [registerEmail, setRegisterEmail] = useState("");
     const [registerAddress, setRegisterAddress] = useState("");
     const [registerPassword1, setRegisterPassword1] = useState("");
     const [registerPassword2, setRegisterPassword2] = useState("");
+
+
     const Register = () => {
         if (!registerFullname) alert("Nem adtál meg nevet!");
         else if (!registerAddress) alert("Nem adtál meg címet!");
@@ -27,8 +31,19 @@ function Registration(props) {
                 withCredentials: true, 
             }).then(res => {
                 if (res.data === "Successfully Registered!") {
+                    alert("Sikeres Regisztráció!");
                     window.location.href = "/";
+                } else if (res.data === "User already exists!") {
+                    alert("Már létezik ilyen felhasználó!");
+                    window.location.href = "/";
+                } else {
+                    alert("Something happened!");
                 }
+                    //setTimeout(function () {
+                    //window.location.href = "/"; //will redirect to your blog page
+                    //}, 2000); //will call the function after 2 secs.
+                    //window.location.href = "/";
+                    //props.history.push('/');
             })
         }
     };
@@ -41,7 +56,7 @@ function Registration(props) {
                                 <div class="card regcard">
                                     <div class="card-header text-center regheader"><h4>Regisztráció</h4></div>
                                     <div class="card-body regcard">
-                                        <form name="registration-form">
+                                        <form name="registration-form" id="regForm">
                                             <div class="form-group row">
                                                 <label for="full_name" class="col-md-4 col-form-label text-md-right">Teljes Név</label>
                                                 <div class="col-md-6">
@@ -78,9 +93,7 @@ function Registration(props) {
                                             </div>
 
                                                 <div class="col-md-6 offset-md-4">
-                                                    <button type="submit" class="btn btn-custom" value="register" onClick={Register}>
-                                                    Regisztráció
-                                                    </button>
+                                                    <input type="button" class="btn btn-custom" value="Regisztráció"  onClick={Register}/>
                                             </div>
                                         </form>
                                     </div>
