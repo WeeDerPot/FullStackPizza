@@ -295,3 +295,11 @@ body {
     color: palegreen;
     margin-top: 15px;
 }
+.finishRow{
+    max-width: 800px;
+    color: palegreen;
+}
+.osszegH{
+    padding-left: 150px;
+    padding-top: 20px;
+}
