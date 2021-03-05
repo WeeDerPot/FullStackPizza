@@ -54,103 +54,103 @@ function Nav(props) {
     return(
         <div>
             <div className="Nav">
-                <div class="header d-flex justify-content-center">
+                <div className="header d-flex justify-content-center">
                     <img src={logo} id="logo"/>
                 </div>
                 
-                <nav class="navbar navbar-expand-lg navbar-light bg-custom pt-2 pb-2" id="navID">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                <nav className="navbar navbar-expand-lg navbar-light bg-custom pt-2 pb-2" id="navID">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                {/* <a class="nav-link" href="/">Főoldal <span class="sr-only">(current)</span></a> */}
-                                <Link class="nav-link" to="/">Főoldal <span class="sr-only">(current)</span></Link>
+                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul className="navbar-nav">
+                            <li className="nav-item active">
+                                {/* <a className="nav-link" href="/">Főoldal <span className="sr-only">(current)</span></a> */}
+                                <Link className="nav-link" to="/">Főoldal <span className="sr-only">(current)</span></Link>
                             </li>
-                            <li class="nav-item">
-                                {/* <a class="nav-link" href="/about">Rólunk</a> */}
-                                <Link class="nav-link" to="/about">Rólunk</Link>
+                            <li className="nav-item">
+                                {/* <a className="nav-link" href="/about">Rólunk</a> */}
+                                <Link className="nav-link" to="/about">Rólunk</Link>
                             </li>
-                            <li class="nav-item">
-                                {/* <a class="nav-link" href="/contact">Kapcsolat</a> */}
-                                <Link class="nav-link" to="/contact">Kapcsolat</Link>
+                            <li className="nav-item">
+                                {/* <a className="nav-link" href="/contact">Kapcsolat</a> */}
+                                <Link className="nav-link" to="/contact">Kapcsolat</Link>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Étlap
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                {/* <a class="dropdown-item" href="/menu#C1">Pizzák</a> */}
-                                <Link class="dropdown-item" to="/menu#C1">Pizzák</Link>
-                                {/* <a class="dropdown-item" href="/menu#C2">Hamburgerek</a> */}
-                                <Link class="dropdown-item" to="/menu#C2">Hamburgerek</Link>
-                                {/* <a class="dropdown-item" href="/menu#C3">Üdítők és köretek</a> */}
-                                <Link class="dropdown-item" to="/menu#C3">Üdítők és köretek</Link>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                {/* <a className="dropdown-item" href="/menu#C1">Pizzák</a> */}
+                                <Link className="dropdown-item" to="/menu#C1">Pizzák</Link>
+                                {/* <a className="dropdown-item" href="/menu#C2">Hamburgerek</a> */}
+                                <Link className="dropdown-item" to="/menu#C2">Hamburgerek</Link>
+                                {/* <a className="dropdown-item" href="/menu#C3">Üdítők és köretek</a> */}
+                                <Link className="dropdown-item" to="/menu#C3">Üdítők és köretek</Link>
                                 </div>
                             </li>
                             {userctx ? (
                                 <>
-                                <li class="nav-item">
-                                    {/* <a class="nav-link" href="/profile">Profil</a> */}
-                                    <Link class="nav-link" to="/profile">Profil</Link>
+                                <li className="nav-item">
+                                    {/* <a className="nav-link" href="/profile">Profil</a> */}
+                                    <Link className="nav-link" to="/profile">Profil</Link>
                                 </li>
                                 {userctx.isAdmin ? (
-                                    <li class="nav-item">
-                                        {/* <a class="nav-link" href="/admin">Admin</a> */}
-                                        <Link class="nav-link" to="/admin">Admin</Link>
+                                    <li className="nav-item">
+                                        {/* <a className="nav-link" href="/admin">Admin</a> */}
+                                        <Link className="nav-link" to="/admin">Admin</Link>
                                     </li>
                                 ) : null}
-                                <li class="nav-item">
-                                    <button class="btn btn-custom minilogin" onClick={GetUser}>GetUser</button>
+                                <li className="nav-item">
+                                    <button className="btn btn-custom minilogin" onClick={GetUser}>GetUser</button>
                                 </li>
                                 </>
                             ) : (
                                 <>
-                                <li class="nav-item">
-                                    {/* <a class="nav-link" href="/registration">Regisztráció</a> */}
-                                    <Link class="nav-link" to="/registration">Regisztráció</Link>
+                                <li className="nav-item">
+                                    {/* <a className="nav-link" href="/registration">Regisztráció</a> */}
+                                    <Link className="nav-link" to="/registration">Regisztráció</Link>
                                 </li>
                                 </>
                             )}    
                         </ul>
 
                         {/* Login Dropdown */}
-                        <div class="navbar-nav ml-auto">
+                        <div className="navbar-nav ml-auto">
                             {userctx ? (
                                 <>
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        {/* <a class="btn btn-custom CartLink" href="/cart"><span><i class="fas fa-shopping-basket"></i></span>{cartItemNumber}</a> */}
-                                        <Link class="btn btn-custom CartLink" to="/cart"><span><i class="fas fa-shopping-basket"></i></span>{cartItemNumber}</Link>
+                                <ul className="navbar-nav">
+                                    <li className="nav-item">
+                                        {/* <a className="btn btn-custom CartLink" href="/cart"><span><i className="fas fa-shopping-basket"></i></span>{cartItemNumber}</a> */}
+                                        <Link className="btn btn-custom CartLink" to="/cart"><span><i className="fas fa-shopping-basket"></i> </span>{cartItemNumber}</Link>
                                         {/* { cart === undefined ? (<></>) : (<>({cart.length})</>) } */}
                                     </li>
                                 </ul>
-                                <input type="button" class="btn btn-custom minilogout" value="Kijelentkezés" onClick={Logout}/>
+                                <input type="button" className="btn btn-custom minilogout" value="Kijelentkezés" onClick={Logout}/>
                                 </>
                             ) : (
                                 <>
-                                <div class="nav-item dropdown login-dropdown">
-                                    <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle" aria-expanded="false"><i class="fa fa-user-o"></i> Bejelentkezés</a>
-                                    <div class="dropdown-menu">					
-                                        <form class="form-inline login-form logindiv">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text iconBox">
-                                                        <span class="fa fa-user"></span>
+                                <div className="nav-item dropdown login-dropdown">
+                                    <a href="#" data-toggle="dropdown" className="nav-item nav-link dropdown-toggle" aria-expanded="false"><i className="fa fa-user-o"></i> Bejelentkezés</a>
+                                    <div className="dropdown-menu">					
+                                        <form className="form-inline login-form logindiv">
+                                            <div className="input-group">
+                                                <div className="input-group-prepend">
+                                                    <span className="input-group-text iconBox">
+                                                        <span className="fa fa-user"></span>
                                                     </span>                    
                                                 </div>
-                                                <input type="email" class="form-control" placeholder="E-mail" name="email" id="email" onChange={e => setEmail(e.target.value)}/>
+                                                <input type="email" className="form-control" placeholder="E-mail" name="email" id="email" onChange={e => setEmail(e.target.value)}/>
                                             </div>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text iconBox">
-                                                        <i class="fa fa-lock"></i>
+                                            <div className="input-group">
+                                                <div className="input-group-prepend">
+                                                    <span className="input-group-text iconBox">
+                                                        <i className="fa fa-lock"></i>
                                                     </span>                    
                                                 </div>
-                                                <input type="password" class="form-control" placeholder="Jelszó" name="password" id="loginpassword" onChange={e => setPassword(e.target.value)}/>
+                                                <input type="password" className="form-control" placeholder="Jelszó" name="password" id="loginpassword" onChange={e => setPassword(e.target.value)}/>
                                             </div> 
-                                            <input type="button" class="btn btn-custom minilogin" value="Bejelentkezés" onClick={Login}/>                                                               
+                                            <input type="button" className="btn btn-custom minilogin" value="Bejelentkezés" onClick={Login}/>                                                               
                                         </form>
                                     </div>
                                 </div>

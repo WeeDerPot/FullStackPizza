@@ -13,28 +13,28 @@ function Menu(props) {
         {context => (
             
         <div className="Menu">
-            <div class="tartalom">
-                <div class="etlapDiv">
-                    <div class="container">
+            <div className="tartalom">
+                <div className="etlapDiv">
+                    <div className="container">
                         {/* Pizzák */}
 
                         <h1 id="C1">Pizzák</h1>
-                        <div class="row">
-                            {pizzas.map(product => (
-                            <div class="col-md-4 col-sm-6">
-                                <div class="card text-center">
-                                    <div class="card-block">
-                                        <img src={ product.image } alt="Étel Kép" class="img-fluid"/>
-                                        <div class="card-title">
+                        <div className="row">
+                            {pizzas.map((product, idx) => (
+                            <div className="col-md-4 col-sm-6" key={idx}>
+                                <div className="card text-center">
+                                    <div className="card-block">
+                                        <img src={ product.image } alt="Étel Kép" className="img-fluid"/>
+                                        <div className="card-title">
                                             <h5>{ product.dishname }</h5>
                                         </div>
-                                        <div class="card-text">
+                                        <div className="card-text">
                                             <p>{ product.toppings }</p>
                                         </div>
-                                        <div class="card-text">
+                                        <div className="card-text">
                                             <p>{ product.price }Ft.</p>
                                         </div>
-                                        <button onClick={context.addProductToCart.bind(this, product)} class="btn btn-success">Kosárba</button>
+                                        <button onClick={context.addProductToCart.bind(this, product)} className="btn btn-success">Kosárba</button>
                                         {/* {context.addProductToCart.bind(this, product)} */}
                                     </div>
                                 </div>
@@ -44,22 +44,22 @@ function Menu(props) {
                         {/* Hamburgerek */}
 
                         <h1 id="C2">Hamburgerek</h1>
-                        <div class="row">
-                            {burgers.map(product => (
-                            <div class="col-md-4 col-sm-6">
-                                <div class="card text-center">
-                                    <div class="card-block">
-                                        <img src={ product.image } alt="Étel Kép" class="img-fluid"/>
-                                        <div class="card-title">
+                        <div className="row">
+                            {burgers.map((product, idx) => (
+                            <div className="col-md-4 col-sm-6" key={idx}>
+                                <div className="card text-center">
+                                    <div className="card-block">
+                                        <img src={ product.image } alt="Étel Kép" className="img-fluid"/>
+                                        <div className="card-title">
                                             <h5>{ product.dishname }</h5>
                                         </div>
-                                        <div class="card-text">
+                                        <div className="card-text">
                                             <p>{ product.toppings }</p>
                                         </div>
-                                        <div class="card-text">
+                                        <div className="card-text">
                                             <p>{ product.price }Ft.</p>
                                         </div>
-                                        <button onClick={context.addProductToCart.bind(this, product)} class="btn btn-success">Kosárba</button>
+                                        <button onClick={context.addProductToCart.bind(this, product)} className="btn btn-success">Kosárba</button>
                                     </div>
                                 </div>
                             </div>
@@ -68,22 +68,22 @@ function Menu(props) {
 
                         {/* Üdítők és köretek */}
                         <h1 id="C3">Üdítők és köretek</h1>
-                        <div class="row">
-                            {others.map(product => (
-                            <div class="col-md-4 col-sm-6">
-                                <div class="card text-center">
-                                    <div class="card-block">
-                                        <img src={ product.image } alt="Étel Kép" class="img-fluid"/>
-                                        <div class="card-title">
+                        <div className="row">
+                            {others.map((product, idx) => (
+                            <div className="col-md-4 col-sm-6" key={idx}>
+                                <div className="card text-center">
+                                    <div className="card-block">
+                                        <img src={ product.image } alt="Étel Kép" className="img-fluid"/>
+                                        <div className="card-title">
                                             <h5>{ product.dishname }</h5>
                                         </div>
-                                        <div class="card-text">
+                                        <div className="card-text">
                                             <p>{ product.toppings }</p>
                                         </div>
-                                        <div class="card-text">
+                                        <div className="card-text">
                                             <p>{ product.price }Ft.</p>
                                         </div>
-                                        <button onClick={context.addProductToCart.bind(this, product)} class="btn btn-success">Kosárba</button>
+                                        <button onClick={context.addProductToCart.bind(this, product)} className="btn btn-success">Kosárba</button>
                                     </div>
                                 </div>
                             </div>

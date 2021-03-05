@@ -53,7 +53,7 @@ body {
     background-color: rgb(241, 241, 28);
     border: solid 1px rgb(97, 97, 15);
     color: rgb(14, 133, 14);
-    width: 50px;
+    width: 60px;
 }
 .CartLink:hover {
     background-color: rgb(233, 166, 43);

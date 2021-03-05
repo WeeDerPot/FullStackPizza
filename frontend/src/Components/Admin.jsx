@@ -36,12 +36,12 @@ export default function Admin(props) {
 
     return (
         <div>         
-                <div class="tartalom">
-                    <div class="cotainer justify-content-center">
-                        <h2 class="text-center text-success adminTitle">Admin Page!</h2>
-                        <div class="row justify-content-center text-success registrationdiv">
-                            <div class="col-lg-6">
-                                <select onChange={e => setSelectedUser(e.target.value)} name="deleteuser" class="form-select form-select-sm adminSelect">
+                <div className="tartalom">
+                    <div className="cotainer justify-content-center">
+                        <h2 className="text-center text-success adminTitle">Admin Page!</h2>
+                        <div className="row justify-content-center text-success registrationdiv">
+                            <div className="col-lg-6">
+                                <select onChange={e => setSelectedUser(e.target.value)} name="deleteuser" className="form-select form-select-sm adminSelect">
                                     <option id="emptySelect">Válaszz felhasználót!</option>
                                     {
                                         data.map((item) => {
@@ -51,11 +51,11 @@ export default function Admin(props) {
                                         })
                                     }
                                 </select>
-                                <input type="button" class="btn btn-custom minilogin" value="Delete User" onClick={deleteUser}/>
+                                <input type="button" className="btn btn-custom minilogin" value="Delete User" onClick={deleteUser}/>
                             </div>
                         </div>
-                        <div class="row justify-content-center text-success registrationdiv">
-                            <div class="col-lg-6">
+                        <div className="row justify-content-center text-success registrationdiv">
+                            <div className="col-lg-6">
                                 <h4>Következő Admin Funkció...</h4>
                             </div>
                         </div>                          

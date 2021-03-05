@@ -44,51 +44,51 @@ function Registration(props) {
     };
     return(
             <div className="Registration">
-                <div class="tartalom">
-                    <div class="cotainer">
-                        <div class="row justify-content-center registrationdiv">
-                            <div class="col-lg-6">
-                                <div class="card regcard">
-                                    <div class="card-header text-center regheader"><h4>Regisztráció</h4></div>
-                                    <div class="card-body regcard">
+                <div className="tartalom">
+                    <div className="cotainer">
+                        <div className="row justify-content-center registrationdiv">
+                            <div className="col-lg-6">
+                                <div className="card regcard">
+                                    <div className="card-header text-center regheader"><h4>Regisztráció</h4></div>
+                                    <div className="card-body regcard">
                                         <form name="registration-form" id="regForm">
-                                            <div class="form-group row">
-                                                <label for="full_name" class="col-md-4 col-form-label text-md-right">Teljes Név</label>
-                                                <div class="col-md-6">
-                                                    <input type="text" id="full_name" class="form-control" name="fullname" onChange={e => setRegisterFullname(e.target.value)}/>
+                                            <div className="form-group row">
+                                                <label htmlFor="full_name" className="col-md-4 col-form-label text-md-right">Teljes Név</label>
+                                                <div className="col-md-6">
+                                                    <input type="text" id="full_name" className="form-control" name="fullname" onChange={e => setRegisterFullname(e.target.value)}/>
                                                 </div>
                                             </div>
 
-                                            <div class="form-group row">
-                                                <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Cím</label>
-                                                <div class="col-md-6">
-                                                    <input type="email" id="email_address" class="form-control" name="email" onChange={e => setRegisterEmail(e.target.value)}/>
+                                            <div className="form-group row">
+                                                <label htmlFor="email_address" className="col-md-4 col-form-label text-md-right">E-Mail Cím</label>
+                                                <div className="col-md-6">
+                                                    <input type="email" id="email_address" className="form-control" name="email" onChange={e => setRegisterEmail(e.target.value)}/>
                                                 </div>
                                             </div>
 
-                                            <div class="form-group row">
-                                                <label for="user_address" class="col-md-4 col-form-label text-md-right">Szállítási Cím</label>
-                                                <div class="col-md-6">
-                                                    <input type="text" id="user_address" class="form-control" name="address" onChange={e => setRegisterAddress(e.target.value)}/>
+                                            <div className="form-group row">
+                                                <label htmlFor="user_address" className="col-md-4 col-form-label text-md-right">Szállítási Cím</label>
+                                                <div className="col-md-6">
+                                                    <input type="text" id="user_address" className="form-control" name="address" onChange={e => setRegisterAddress(e.target.value)}/>
                                                 </div>
                                             </div>
 
-                                            <div class="form-group row">
-                                                <label for="password" class="col-md-4 col-form-label text-md-right">Jelszó</label>
-                                                <div class="col-md-6">
-                                                    <input type="password" id="password" class="form-control" name="password" onChange={e => setRegisterPassword1(e.target.value)}/>
+                                            <div className="form-group row">
+                                                <label htmlFor="password" className="col-md-4 col-form-label text-md-right">Jelszó</label>
+                                                <div className="col-md-6">
+                                                    <input type="password" id="password" className="form-control" name="password" onChange={e => setRegisterPassword1(e.target.value)}/>
                                                 </div>
                                             </div>
 
-                                            <div class="form-group row">
-                                                <label for="password2" class="col-md-4 col-form-label text-md-right">Jelszó Megerősítés</label>
-                                                <div class="col-md-6">
-                                                    <input type="password" id="password2" class="form-control" name="password2" onChange={e => setRegisterPassword2(e.target.value)}/>
+                                            <div className="form-group row">
+                                                <label htmlFor="password2" className="col-md-4 col-form-label text-md-right">Jelszó Megerősítés</label>
+                                                <div className="col-md-6">
+                                                    <input type="password" id="password2" className="form-control" name="password2" onChange={e => setRegisterPassword2(e.target.value)}/>
                                                 </div>
                                             </div>
 
-                                                <div class="col-md-6 offset-md-4">
-                                                    <input type="button" class="btn btn-custom" value="Regisztráció"  onClick={Register}/>
+                                                <div className="col-md-6 offset-md-4">
+                                                    <input type="button" className="btn btn-custom" value="Regisztráció"  onClick={Register}/>
                                             </div>
                                         </form>
                                     </div>
