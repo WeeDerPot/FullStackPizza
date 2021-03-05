@@ -1,7 +1,7 @@
-import React from "react";
-import aboutKep from "../Images/pexels-martin-péchy-1028225.jpg"
+import React, { useContext } from "react";
+import aboutKep from "../Images/pexels-martin-péchy-1028225.jpg";
 
-function About() {
+function About(props) {
     return(
         <div className="About">
             <div class="tartalom">

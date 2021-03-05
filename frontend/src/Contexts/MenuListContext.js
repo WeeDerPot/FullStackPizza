@@ -1,10 +1,16 @@
-import React,{useState, createContext} from "react";
+import React,{ useState, createContext, useReducer } from "react";
 import pizzakep from "../Images/pizza-2000615_1920.jpg";
 import burgerkep from "../Images/pexels-valeria-boltneva-1251198 (1).jpg";
 import uditokep from "../Images/pexels-alleksana-4113662.jpg";
 import burgonyakep from "../Images/pexels-dzenina-lukac-1583884.jpg";
 
-export const MenuListContext = createContext();
+import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from "./CartFunctions";
+
+export const MenuListContext = createContext({
+    cart: [],
+    addProductToCart: product => {},
+    removeProductFromCart: product => {}
+});
 
 export const MenuProvider = props => {
     const [pizzas] = useState([
@@ -111,8 +117,34 @@ export const MenuProvider = props => {
             price: 500,
         },
     ]);
+    //const [cart, setCart] = useState([]);
+    const [cartState, dispatch] = useReducer(shopReducer, { cart: [] });
+
+    const addProductToCart = (product) => {
+        setTimeout(() => {
+          //setCart(updatedCart);
+          dispatch({ type: ADD_PRODUCT, product: product });
+        }, 700);
+    };
+
+    const removeProductFromCart = (product) => {
+        setTimeout(() => {
+          //setCart(updatedCart);
+          dispatch({ type: REMOVE_PRODUCT, product: product });
+        }, 700);
+    };
+
     return (
-        <MenuListContext.Provider value={{ pizzavalue: [pizzas], burgervalue: [burgers], othervalue:[others]}}>
+        <MenuListContext.Provider 
+            value={{ 
+                pizzavalue: [pizzas], 
+                burgervalue: [burgers], 
+                othervalue:[others], 
+                cart:cartState.cart,
+                addProductToCart: addProductToCart,
+                removeProductFromCart: removeProductFromCart
+            }}
+        >
             {props.children}
         </MenuListContext.Provider>
     );

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { UserContext } from '../Contexts/UserContext';
 
-export default function Admin() {
+export default function Admin(props) {
     const userctx = useContext(UserContext);
     const [ data, setData ] = useState([]);
     const [ selectedUser, setSelectedUser ] = useState();
@@ -35,7 +35,7 @@ export default function Admin() {
     }
 
     return (
-        <div>
+        <div>         
                 <div class="tartalom">
                     <div class="cotainer justify-content-center">
                         <h2 class="text-center text-success adminTitle">Admin Page!</h2>

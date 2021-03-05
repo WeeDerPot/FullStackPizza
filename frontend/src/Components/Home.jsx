@@ -5,20 +5,20 @@ import homeKep3 from "../Images/pizza-3007395_1920.jpg";
 import homeKep4 from "../Images/pizza-711670_1920.jpg";
 import { UserContext } from '../Contexts/UserContext';
 
-function Home() {
+function Home(props) {
     // LOG User
     //const userctx = useContext(UserContext);
     //console.log(userctx);
 
     // Auto Slide
-    var counter = 1;
-    setInterval(function(){
-      document.getElementById('slideRadio' + counter).checked = true;
-      counter++;
-        if (counter > 4) {
-          counter = 1;
-        }
-      }, 5000);
+    //  var counter = 1;
+    //  setInterval(function(){
+    //    document.getElementById('slideRadio' + counter).checked = true;
+    //    counter++;
+    //      if (counter > 4) {
+    //         counter = 1;
+    //     }
+    // }, 5000);
     return(
         <div className="Home">
             <div class="tartalom">

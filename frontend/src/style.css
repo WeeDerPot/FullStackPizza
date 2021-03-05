@@ -278,3 +278,20 @@ body {
 .adminTitle{
     margin-top: 25px;
 }
+/* Cart Page */
+.cartKep {
+    width: 100px;
+}
+.cartRow {
+    background-color: rgba(182, 236, 182, 0.986);
+    max-width: 800px;
+}
+.FinishBtn{
+    background-color: rgb(241, 241, 28);
+    color: orangered;
+}
+.emptyCart{
+    text-align: center;
+    color: palegreen;
+    margin-top: 15px;
+}

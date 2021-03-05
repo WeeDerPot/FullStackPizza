@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Redirect, withRouter } from "react-router-dom";
 
@@ -39,11 +39,6 @@ function Registration(props) {
                 } else {
                     alert("Something happened!");
                 }
-                    //setTimeout(function () {
-                    //window.location.href = "/"; //will redirect to your blog page
-                    //}, 2000); //will call the function after 2 secs.
-                    //window.location.href = "/";
-                    //props.history.push('/');
             })
         }
     };
