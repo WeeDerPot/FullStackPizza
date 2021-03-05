@@ -24,7 +24,7 @@ const addProductToCart = (product, state) => {
 const removeProductFromCart = (product, state) => {
     console.log("Removing product with name: " + product.dishname);
     const updatedCart = [...state.cart];
-    const updatedItemIndex = updatedCart.findIndex(item => item.dishname === product);
+    const updatedItemIndex = updatedCart.findIndex(item => item.dishname === product.dishname);
   
     const updatedItem = {
       ...updatedCart[updatedItemIndex]

@@ -1,9 +1,10 @@
 import React, { useState, useContext } from "react";
-import { Link, withRouter, Redirect } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 import logo from "../Images/8890b180-cee1-4c9d-a001-c1d327b12dc8_200x200.png";
 import axios from "axios";
 import { UserContext } from '../Contexts/UserContext';
 import { MenuListContext } from "../Contexts/MenuListContext";
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Nav(props) {
     const userctx = useContext(UserContext);
