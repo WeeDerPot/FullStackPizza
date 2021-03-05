@@ -1,6 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { Redirect, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 function Registration(props) {
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { MenuListContext } from "../Contexts/MenuListContext";
-import { useContext, useState } from "react";
-import Nav from './Nav';
+import { useContext } from "react";
 
 function Menu(props) {
     const { pizzavalue, burgervalue, othervalue } = useContext(MenuListContext);

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import aboutKep from "../Images/pexels-martin-péchy-1028225.jpg";
 
 function About(props) {

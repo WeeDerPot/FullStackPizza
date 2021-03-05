@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import logo from "../Images/8890b180-cee1-4c9d-a001-c1d327b12dc8_200x200.png";
 import axios from "axios";
 import { UserContext } from '../Contexts/UserContext';
@@ -55,7 +55,7 @@ function Nav(props) {
         <div>
             <div className="Nav">
                 <div className="header d-flex justify-content-center">
-                    <img src={logo} id="logo"/>
+                    <img src={logo} alt="logo" id="logo"/>
                 </div>
                 
                 <nav className="navbar navbar-expand-lg navbar-light bg-custom pt-2 pb-2" id="navID">

@@ -1,19 +1,15 @@
-import React, { createContext, useContext, useState, useEffect }from "react";
+import React, { useContext }from "react";
 import { BrowserRouter, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Nav, Footer, About, Contact, Home, Menu, Registration, Admin, Cart, Profile } from "./Components";
 import "./style.css";
-import { MenuProvider, MenuListContext } from './Contexts/MenuListContext';
-import UserContextProvider from './Contexts/UserContext';
 import { UserContext } from './Contexts/UserContext';
 
 function App() {
   const userctx = useContext(UserContext);
-  const context = useContext(MenuListContext);
 
   return (
     <div className="App">
       <BrowserRouter>
-      {/* <MenuProvider> */}
         <Router>
           <Nav />
           <Switch>
@@ -37,7 +33,6 @@ function App() {
           </Switch>
           <Footer/>
         </Router>
-      {/* </MenuProvider> */}
       </BrowserRouter>
     </div>
   );
