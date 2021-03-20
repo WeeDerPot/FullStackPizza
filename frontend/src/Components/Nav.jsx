@@ -65,15 +65,12 @@ function Nav(props) {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item active">
-                                {/* <a className="nav-link" href="/">Főoldal <span className="sr-only">(current)</span></a> */}
                                 <Link className="nav-link" to="/">Főoldal <span className="sr-only">(current)</span></Link>
                             </li>
                             <li className="nav-item">
-                                {/* <a className="nav-link" href="/about">Rólunk</a> */}
                                 <Link className="nav-link" to="/about">Rólunk</Link>
                             </li>
                             <li className="nav-item">
-                                {/* <a className="nav-link" href="/contact">Kapcsolat</a> */}
                                 <Link className="nav-link" to="/contact">Kapcsolat</Link>
                             </li>
                             <li className="nav-item dropdown">
@@ -81,34 +78,28 @@ function Nav(props) {
                                 Étlap
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                {/* <a className="dropdown-item" href="/menu#C1">Pizzák</a> */}
                                 <Link className="dropdown-item" to="/menu#C1">Pizzák</Link>
-                                {/* <a className="dropdown-item" href="/menu#C2">Hamburgerek</a> */}
                                 <Link className="dropdown-item" to="/menu#C2">Hamburgerek</Link>
-                                {/* <a className="dropdown-item" href="/menu#C3">Üdítők és köretek</a> */}
                                 <Link className="dropdown-item" to="/menu#C3">Üdítők és köretek</Link>
                                 </div>
                             </li>
                             {userctx ? (
                                 <>
-                                <li className="nav-item">
-                                    {/* <a className="nav-link" href="/profile">Profil</a> */}
+                                {/* <li className="nav-item">
                                     <Link className="nav-link" to="/profile">Profil</Link>
-                                </li>
+                                </li> */}
                                 {userctx.isAdmin ? (
                                     <li className="nav-item">
-                                        {/* <a className="nav-link" href="/admin">Admin</a> */}
                                         <Link className="nav-link" to="/admin">Admin</Link>
                                     </li>
                                 ) : null}
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <button className="btn btn-custom minilogin" onClick={GetUser}>GetUser</button>
-                                </li>
+                                </li> */}
                                 </>
                             ) : (
                                 <>
                                 <li className="nav-item">
-                                    {/* <a className="nav-link" href="/registration">Regisztráció</a> */}
                                     <Link className="nav-link" to="/registration">Regisztráció</Link>
                                 </li>
                                 </>
@@ -121,7 +112,6 @@ function Nav(props) {
                                 <>
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        {/* <a className="btn btn-custom CartLink" href="/cart"><span><i className="fas fa-shopping-basket"></i></span>{cartItemNumber}</a> */}
                                         <Link className="btn btn-custom CartLink" to="/cart"><span><i className="fas fa-shopping-basket"></i> </span>{cartItemNumber}</Link>
                                         {/* { cart === undefined ? (<></>) : (<>({cart.length})</>) } */}
                                     </li>
