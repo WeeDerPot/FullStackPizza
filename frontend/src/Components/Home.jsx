@@ -21,39 +21,44 @@ function Home(props) {
     return(
         <div className="Home">
             <div className="tartalom">
-                <div className="slider-div">
-                    <div className="slider">
-                        <div className="slides">
-                            <input type="radio" name="radio-btn" id="slideRadio1"/>
-                            <input type="radio" name="radio-btn" id="slideRadio2"/>
-                            <input type="radio" name="radio-btn" id="slideRadio3"/>
-                            <input type="radio" name="radio-btn" id="slideRadio4"/>
-                    
-                            <div className="slide first">
-                                <img src={homeKep1} alt=""/>
-                            </div>
-                            <div className="slide">
-                                <img src={homeKep2} alt=""/>
-                            </div>
-                            <div className="slide">
-                                <img src={homeKep3} alt=""/>
-                            </div>
-                            <div className="slide">
-                                <img src={homeKep4} alt=""/>
-                            </div>
-                    
-                            <div className="auto-nav">
-                                <div className="auto-btn1"></div>
-                                <div className="auto-btn2"></div>
-                                <div className="auto-btn3"></div>
-                                <div className="auto-btn4"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md">
+                        </div>
+                        <div class="col-md-10">
+                            <div id="slide" class="carousel slide slidediv" data-ride="carousel">
+
+                                <ul class="carousel-indicators">
+                                    <li data-target="#slide" data-slide-to="0" className="manual-btn active"></li>
+                                    <li data-target="#slide" data-slide-to="1" className="manual-btn"></li>
+                                    <li data-target="#slide" data-slide-to="2" className="manual-btn"></li>
+                                    <li data-target="#slide" data-slide-to="3" className="manual-btn"></li>
+                                </ul>
+
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src={homeKep1} alt="homekep1" />
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src={homeKep2} alt="homekep2" />
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src={homeKep3} alt="homekep3" />
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src={homeKep4} alt="homekep4" />
+                                    </div>
+                                </div>
+
+                                <a class="carousel-control-prev" href="#slide" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
                             </div>
                         </div>
-                        <div className="manual-nav">
-                            <label htmlFor="slideRadio1" className="manual-btn"></label>
-                            <label htmlFor="slideRadio2" className="manual-btn"></label>
-                            <label htmlFor="slideRadio3" className="manual-btn"></label>
-                            <label htmlFor="slideRadio4" className="manual-btn"></label>
+                        <div class="col-md">
                         </div>
                     </div>
                 </div>

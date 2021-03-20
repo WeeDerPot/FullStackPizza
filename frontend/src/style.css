@@ -70,95 +70,22 @@ body {
     margin-right: 0px;
     padding: 0px;
 }
-.slider-div {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 65vh;
-}
-.slider{
-    width: 800px;
-    height: 500px;
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
-    overflow: hidden;
 }
-.slides{
-    width: 500%;
-    height: 500px;
-    display: flex;
-}
-.slides input{
-    display: none;
-}
-.slide{
-    width: 20%;
-    transition: 2s;
-}
-.slide img{
-    width: 800px;
-    height: 500px;
-}
-.manual-nav{
-    position: absolute;
-    width: 800px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
+.carousel-indicators li {
+    width: 10px;
 }
 .manual-btn{
     border: 2px solid lime;
     padding: 5px;
     border-radius: 10px;
-    cursor: pointer;
     transition: 1s;
 }
-.manual-btn:not(:last-child){
-    margin-right: 35px;
-}
-.manual-btn:hover{
-    background: lime;
-}
-#slideRadio1:checked ~ .first{
-    margin-left: 0;
-}
-#slideRadio2:checked ~ .first{
-    margin-left: -20%;
-}
-#slideRadio3:checked ~ .first{
-    margin-left: -40%;
-}
-#slideRadio4:checked ~ .first{
-    margin-left: -60%;
-}
-.auto-nav{
-    position: absolute;
-    display: flex;
-    width: 800px;
-    justify-content: center;
-    margin-top: 460px;
-}
-.auto-nav div{
-    border: 2px solid lime;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-}
-.auto-nav div:not(:last-child){
-    margin-right: 35px;
-}
-#slideRadio1:checked ~ .auto-nav .auto-btn1{
-    background: lime;
-}
-#slideRadio2:checked ~ .auto-nav .auto-btn2{
-    background: lime;
-}
-#slideRadio3:checked ~ .auto-nav .auto-btn3{
-    background: lime;
-}
-#slideRadio4:checked ~ .auto-nav .auto-btn4{
-    background: lime;
+.slidediv{
+    margin-top: 35px;
 }
 /* Footer */
 .footer {
