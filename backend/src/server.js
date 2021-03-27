@@ -8,14 +8,16 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const bcrypt = require("bcryptjs");
 const User = require("./User");
-const dotenv = require("dotenv");
+//const dotenv = require("dotenv");
 
 const LocalStrategy = passportLocal.Strategy;
 
-dotenv.config();
+require('dotenv').config();
 
 // Mongo DB Connection
-mongoose.connect("mongodb+srv://WeeDerPot:gU8Z9MtDeGFWEEvF@chriscluster.9p8p5.mongodb.net/PizzaUser_DB?retryWrites=true&w=majority", {
+//mongoose.connect("mongodb+srv://WeeDerPot:gU8Z9MtDeGFWEEvF@chriscluster.9p8p5.mongodb.net/PizzaUser_DB?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_URI, {
+    dbName: process.env.DB_NAME,
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
@@ -31,7 +33,7 @@ app.use(express.json());
 app.use(cors({origin: "http://localhost:3000", credentials: true}));
 app.use(
     session({
-        secret: "secrettunnel",
+        secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false,
     })
@@ -141,6 +143,8 @@ app.get("/auth/getallusers", isAdminMiddleware, async (req, res) => {
         res.send(data);
     });
 });
+
+/*app.use('/auth', require('./auth.route'));*/
 
 // Connect to PORT 
 const PORT = process.env.PORT || 8000;
