@@ -46,7 +46,7 @@ export default function Admin(props) {
                                     {
                                         data.map((item) => {
                                             return (
-                                                <option id={item.email}>{item.email}</option>
+                                                <option key={item.email} id={item.email}>{item.email}</option>
                                             )
                                         })
                                     }

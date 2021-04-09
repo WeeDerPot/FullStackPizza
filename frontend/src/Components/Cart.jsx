@@ -5,7 +5,6 @@ import { UserContext } from '../Contexts/UserContext';
 export default function Cart(props) {
     const context = useContext(MenuListContext);
     const userctx = useContext(UserContext);
-    // const sumPrice = context.cart.reduce((a, c) => a + c.price * c.quantity);
     let sum = 0;
     context.cart.forEach(cartItem => {
         sum += cartItem.price * cartItem.quantity;
