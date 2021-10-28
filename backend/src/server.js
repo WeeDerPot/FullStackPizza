@@ -8,14 +8,12 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const bcrypt = require("bcryptjs");
 const User = require("./User");
-//const dotenv = require("dotenv");
 
 const LocalStrategy = passportLocal.Strategy;
 
 require('dotenv').config();
 
 // Mongo DB Connection
-//mongoose.connect("mongodb+srv://WeeDerPot:gU8Z9MtDeGFWEEvF@chriscluster.9p8p5.mongodb.net/PizzaUser_DB?retryWrites=true&w=majority", {
 mongoose.connect(process.env.MONGO_URI, {
     dbName: process.env.DB_NAME,
     useNewUrlParser: true,
